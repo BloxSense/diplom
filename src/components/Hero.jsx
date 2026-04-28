@@ -2,11 +2,19 @@ import dotaImage from "../assets/images/dota1.png";
 import { Link } from "react-router-dom";
 
 function Hero() {
+  const targetLink = localStorage.getItem("token")
+    ? "/dashboard"
+    : "/login";
+
   return (
     <header className="header">
       <div className="header__container">
         <div className="header__image">
-          <img src={dotaImage} alt="Dota 2 header" className="header__image-pic" />
+          <img
+            src={dotaImage}
+            alt="Dota 2 header"
+            className="header__image-pic"
+          />
         </div>
 
         <div className="header__content">
@@ -19,8 +27,8 @@ function Hero() {
             сильные стороны, а также уверенно расти по рейтингу.
           </p>
 
-          <Link to="/login" className="header__button">
-          Попробовать
+          <Link to={targetLink} className="header__button">
+            Попробовать
           </Link>
         </div>
       </div>

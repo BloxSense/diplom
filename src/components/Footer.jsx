@@ -27,7 +27,14 @@ function Footer() {
 
           <div className="footer__column">
             <h4 className="footer__title">Компания</h4>
-            <a href="#" className="footer__link">Документация</a>
+            <a
+            href="https://docs.opendota.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+          >
+            Документация
+          </a>
           </div>
 
           <div className="footer__column">
@@ -40,8 +47,9 @@ function Footer() {
 
           <div className="footer__column">
             <h4 className="footer__title">Ресурсы</h4>
-            <a href="#" className="footer__link">Положение о конфиденциальности</a>
-            <a href="#" className="footer__link">Политика использования cookies</a>
+            <Link to="/privacy" className="footer__link">
+              Положение о конфиденциальности
+            </Link>
           </div>
         </div>
       </div>
